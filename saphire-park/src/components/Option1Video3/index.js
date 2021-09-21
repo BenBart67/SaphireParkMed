@@ -7,7 +7,13 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Container from '@mui/material/Container';
-
+import TextField from '@mui/material/TextField';
+import Checkbox from '@mui/material/Checkbox';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Button from '@mui/material/Button';
+import { width } from "@mui/system";
+import zIndex from "@mui/material/styles/zIndex";
 
 function Option1Video3(props) {
 
@@ -116,11 +122,16 @@ function Option1Video3(props) {
       </div>
       <h1 className="hello-la-1">HELLO L.A.</h1>
     </div>
+    
     <div className="overlap-group7">
+    <Container>
       <img
-        className="getty-images-619265078"
+       
         src="https://anima-uploads.s3.amazonaws.com/projects/613fa78586bd2aceeb55e163/releases/613fa7bb3ba8178a69f50590/img/gettyimages-619265078@1x.png"
+        style={{marginLeft:120, marginTop:680, height:750}}
       />
+      </Container>
+      <Container style={{position:'relative', top:450, left:-80}}>
       <div className="premier-concierge-me">
         <span className="span0-1 optima-regular-normal-cod-gray-28px">PREMIER CONCIERGE MEDICAL SERVICES<br /></span
         ><span className="optima-regular-normal-cod-gray-22px"
@@ -136,7 +147,10 @@ function Option1Video3(props) {
           access to your healthcare team. A team that’s more than happy to work around your busy schedule to address
           your healthcare needs, whatever they may be.</span>
       </div>
+      </Container>
+      
     </div>
+   
     <div className="overlap-group2-1">
       <div className="rectangle-6-1"></div>
       <div className="our-services-1 optima-regular-normal-cod-gray-28px">OUR SERVICES</div>
@@ -239,36 +253,42 @@ function Option1Video3(props) {
     <div className="overlap-group-1">
       <div className="flex-col-2">
         <div className="schedule-online-1 optima-regular-normal-cod-gray-28px">SCHEDULE ONLINE</div>
-        <form className="flex-row-4 optima-regular-normal-cod-gray-18px">
-          <div className="first-name-1">FIRST NAME</div>
-          <div className="last-name-1">LAST NAME</div>
-        </form>
-        <div className="flex-row-5">
-          <div className="rectangle-1 border-1px-dove-gray"></div>
-          <div className="rectangle-11-1 border-1px-dove-gray"></div>
+        <TextField id="standard-basic" label="First Name" variant="standard"  style={{width:340}}/>
+        <TextField id="standard-basic" label="Last Name" variant="standard"  style={{width:340, marginLeft: 450, marginTop:-50}}/>
+        <div>
+          <div ></div>
+          <div></div>
         </div>
-        <div className="flex-row-6 optima-regular-normal-cod-gray-18px">
-          <div className="address-1">ADDRESS</div>
-          <div className="flex-row-item">CITY</div>
-          <div className="flex-row-item">CA</div>
+        <div>
+        <TextField id="standard-basic" label="Address" variant="standard"  style={{width:340, marginTop:40}}/>
+        <TextField id="standard-basic" label="City" variant="standard"  style={{width:340, marginLeft: 109, marginTop:40}}/>
+        <TextField id="standard-basic" label="State" variant="standard" value='CA' style={{width:40, marginLeft: 109, marginTop:40}}/>
+         
         </div>
-        <div className="flex-row-7">
-          <div className="rectangle-1 border-1px-dove-gray"></div>
-          <div className="rectangle-13-1 border-1px-dove-gray"></div>
-          <div className="rectangle-14-1 border-1px-dove-gray"></div>
+        <div >
+       
         </div>
       </div>
       <div className="flex-row-8">
         <div classNameName="preferred-contact-1 optima-regular-normal-cod-gray-18px">PREFERRED CONTACT:</div>
         <div classNameName="rectangle-15-1 border-1px-dove-gray"></div>
-        <div className="phone-1 optima-regular-normal-cod-gray-18px">PHONE</div>
-        <div className="rectangle-18-1 border-1px-dove-gray"></div>
-        <div className="email-1 optima-regular-normal-cod-gray-18px">EMAIL</div>
+      <FormGroup>
+      <FormControlLabel control={<Checkbox/>} label="Phone" style={{marginTop:-10, marginLeft: 10}} />
+      <FormControlLabel control={<Checkbox/>} label="Email" style={{marginTop:-42, marginLeft: 100}}/>
+      </FormGroup>
       </div>
       <div className="flex-col-3">
-        <div className="phone-2 optima-regular-normal-cod-gray-18px">PHONE</div>
-        <div className="rectangle-36 border-1px-dove-gray"></div>
-        <div className="overlap-group12 border-1px-black"><div className="submit-1">SUBMIT</div></div>
+      <TextField id="standard-basic" label="Phone" variant="standard"style={{width:640, marginLeft: 1, marginTop:5}}/>
+      <Button variant="outlined" style={{
+ borderColor:"#000000",
+ color:'#000000',
+ width:200,
+ marginTop: 40,
+ marginLeft:1,
+ zIndex:1
+}}
+>SubmiT</Button>
+
       </div>
     </div>
     <div className="overlap-group4-1 border-1px-dove-gray">
@@ -422,27 +442,29 @@ function Option1Video3(props) {
       <div className="rectangle-30 border-1px-akaroa"></div>
       <div className="rectangle-8"></div>
       <div className="rectangle-21"></div>
+      <Container>
       <div className="book-now optima-regular-normal-cod-gray-16px">BOOK NOW</div>
       <div className="schedule-online optima-regular-normal-cod-gray-28px">SCHEDULE ONLINE</div>
-      <div className="first-name optima-regular-normal-cod-gray-14px">FIRST NAME</div>
-      <div className="last-name optima-regular-normal-cod-gray-14px">LAST NAME</div>
-      <div className="address optima-regular-normal-cod-gray-14px">ADDRESS</div>
-      <div className="phone optima-regular-normal-cod-gray-14px">PHONE</div>
-      <div className="email optima-regular-normal-cod-gray-14px">EMAIL</div>
+      <TextField id="standard-basic" label="First Name" variant="standard" style={{marginTop:600,}}/>
+      <TextField id="standard-basic" label="Last Name" variant="standard" style={{marginTop:1630,}}/>
+      <TextField id="standard-basic" label="First Name" variant="standard" style={{marginTop:1580, marginLeft:-199}}/>
+      <TextField id="standard-basic" label="Address" variant="standard" style={{marginTop:1680, marginLeft:-199}}/>
       <div className="preferred-contact optima-regular-normal-cod-gray-14px">PREFERRED CONTACT:</div>
-      <div className="city optima-regular-normal-cod-gray-14px">CITY</div>
-      <div className="ca optima-regular-normal-cod-gray-14px">CA</div>
+      <TextField id="standard-basic" label="City" variant="standard" style={{marginTop:1750, marginLeft:-199}}/>
+      <TextField id="standard-basic" label="State" variant="standard" value='CA' style={{width:40, marginLeft: 40, marginTop:1750}}/>
       <div className="text-17 optima-regular-normal-cod-gray-14px">CALL OR TEXT 424.402.9609</div>
-      <div className="rectangle-9 border-1px-dove-gray"></div>
-      <div className="rectangle-10 border-1px-dove-gray"></div>
-      <div className="rectangle-11 border-1px-dove-gray"></div>
-      <div className="rectangle-12 border-1px-dove-gray"></div>
-      <div className="rectangle-13 border-1px-dove-gray"></div>
-      <div className="rectangle-14 border-1px-dove-gray"></div>
-      <div className="rectangle-15 border-1px-dove-gray"></div>
-      <div className="rectangle-18 border-1px-dove-gray"></div>
-      <div className="rectangle-19 border-1px-black"></div>
-      <div className="submit">SUBMIT</div>
+      </Container>
+      <Container>
+<Button variant="outlined" style={{
+ borderColor:"#000000",
+ color:'#000000',
+ width:200,
+ marginTop: 190,
+ marginLeft:150,
+ zIndex:1
+}}
+>SubmiT</Button>
+</Container>
       <div className="rectangle-20 border-1px-dove-gray"></div>
       <img
         className="image-4-1"
@@ -453,6 +475,12 @@ function Option1Video3(props) {
         All Rights Reserved.
       </p>
     </div>
+    <Container>
+    <FormGroup>
+      <FormControlLabel control={<Checkbox/>} label="Phone" style={{marginTop:-399, marginLeft:-5, paddingBottom:10, zIndex:1}}/>
+      <FormControlLabel control={<Checkbox/>} label="Email" style={{marginTop:-20, marginLeft: -5, marginRight:280, zIndex:1,}}/>
+      </FormGroup>
+    </Container>
   </div>
 </div>
 <Modal

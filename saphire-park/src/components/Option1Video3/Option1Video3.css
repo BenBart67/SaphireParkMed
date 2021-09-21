@@ -900,7 +900,7 @@
   background-color: var(--white);
   display: flex;
   flex-direction: column;
-  height: 4678px;
+  height: 4638px;
   max-width: 1824px;
 }
 
@@ -943,11 +943,10 @@
   color: #f9fafe;
   font-family: var(--font-family-montserrat);
   font-size: var(--font-size-m);
-  left: 645px;
+  margin-top: 50px;
   letter-spacing: 5.29px;
   line-height: 18px;
-  position: absolute;
-  top: 55px;
+  margin-left: -250px;
   white-space: nowrap;
 }
 
@@ -997,10 +996,13 @@
   align-items: center;
   background-color: var(--seashell-peach);
   display: flex;
-  height: 1049px;
+  max-height: 804px;
   justify-content: flex-end;
   min-width: 1579px;
-  padding: 26px 62px;
+  height:900px;
+  width:1700px;
+  padding-bottom:762px;
+  padding-top: 62px;
 }
 
 .option-1-video-3 .getty-images-619265078 {
