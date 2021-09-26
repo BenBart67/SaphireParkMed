@@ -1,7 +1,8 @@
-import "./App.css";
+import "./globals.css";
 import React from "react";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 import Option1Video3 from "./components/Option1Video3";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 
 
@@ -11,8 +12,8 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/:path(|option-1-video-3)">
-          <Option1Video3 {...option1Video3Data} />
+        <Route path="/">
+          <Dashboard/>
         </Route>
       </Switch>
     </Router>

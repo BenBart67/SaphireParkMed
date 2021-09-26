@@ -302,13 +302,10 @@ function Option1Video3(props) {
 </div>
 <div className="container-center-horizontal">
   <div className="option-1-video-2 screen">
-    <div className="overlap-group4 border-1px-dove-gray">
-      <img
-        className="image-4"
-        src="https://anima-uploads.s3.amazonaws.com/projects/613fa78586bd2aceeb55e163/releases/613fb065eb5d68be95fadc2d/img/image-4-2@1x.png"
-      />
-      <div className="overlap-group6 border-1px-white"><div className="place">CONTACT</div></div>
-    </div>
+    <Container className="overlap-group4 border-1px-dove-gray">
+    <text class="place-3">SAPPHIRE</text>
+    <text class="surname-3">PARK MEDICAL</text>
+    </Container>
     <div className="overlap-group5">
       <div className="rectangle-5"></div>
       <div className="rectangle-6"></div>
@@ -445,13 +442,16 @@ function Option1Video3(props) {
       <Container>
       <div className="book-now optima-regular-normal-cod-gray-16px">BOOK NOW</div>
       <div className="schedule-online optima-regular-normal-cod-gray-28px">SCHEDULE ONLINE</div>
-      <TextField id="standard-basic" label="First Name" variant="standard" style={{marginTop:600,}}/>
-      <TextField id="standard-basic" label="Last Name" variant="standard" style={{marginTop:1630,}}/>
-      <TextField id="standard-basic" label="First Name" variant="standard" style={{marginTop:1580, marginLeft:-199}}/>
-      <TextField id="standard-basic" label="Address" variant="standard" style={{marginTop:1680, marginLeft:-199}}/>
+      <Container style={{marginLeft:150}}>
+      <TextField id="standard-basic" label="Last Name" variant="standard" style={{marginTop:1630, width:300}}/>
+      <TextField id="standard-basic" label="First Name" variant="standard" style={{marginTop:1580, marginLeft:-300, width:300}}/>
+      <TextField id="standard-basic" label="Address" variant="standard" style={{marginTop:1680, marginLeft:-300, width:300}}/>
+      </Container>
       <div className="preferred-contact optima-regular-normal-cod-gray-14px">PREFERRED CONTACT:</div>
-      <TextField id="standard-basic" label="City" variant="standard" style={{marginTop:1750, marginLeft:-199}}/>
-      <TextField id="standard-basic" label="State" variant="standard" value='CA' style={{width:40, marginLeft: 40, marginTop:1750}}/>
+      <Container style={{marginLeft:450}}>
+      <TextField id="standard-basic" label="City" variant="standard" style={{ marginLeft:-300, width:200}}/>
+      <TextField id="standard-basic" label="State" variant="standard" value='CA' style={{width:40, marginLeft: 40,}}/>
+      </Container>
       <div className="text-17 optima-regular-normal-cod-gray-14px">CALL OR TEXT 424.402.9609</div>
       </Container>
       <Container>
