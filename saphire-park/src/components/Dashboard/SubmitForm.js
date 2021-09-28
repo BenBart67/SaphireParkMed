@@ -70,7 +70,7 @@ const SubmitForm = () => {
         width: '100vw',
         padding:0}}>
      <Container className={FormContainer}> 
-        <Typography style={{fontSize:28}}>SCHEDULE ONLINE</Typography>
+        <text className='optima-regular-normal-cod-gray-28px'>SCHEDULE ONLINE</text>
         <Container className={Formcontrol}>     
         <TextField id="standard-basic" label="First Name" variant="standard" style={{ width:400}}/>
         <TextField id="standard-basic" label="Last Name" variant="standard" style={{width:500}}/>

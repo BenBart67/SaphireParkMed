@@ -16,6 +16,9 @@ import Services2 from './Services2';
 import Contact from './Contact';
 import SubmitForm from './SubmitForm';
 import Footer from './Footer';
+import './Dashboard.css'
+import OurSevices from './OurSevices';
+
 
 
 const Dashboard = () => {
@@ -25,7 +28,7 @@ const Dashboard = () => {
            <Header/>
            <Video/> 
            <Paragraph/>
-           <Typography style={{fontSize: 28, position:'absolute', top:1980, left:660 }}>Our Services</Typography>
+           <OurSevices/>
            <Services/>
            <Services2/>
            <Contact/>

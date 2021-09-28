@@ -16,28 +16,29 @@ import { CardActionArea } from '@mui/material';
 import './Dashboard.css'
 
 const useStyles = makeStyles(() => ({
-mainCon:{
-width: '100vw',
-zIndex:1
-},
+    mainCon:{
+    width: '100vw',
+    zIndex:1,
+    marginTop:170
+    },
+    
+    bookNow:{
+    height:21,
+    width: '100vw',
+    display: 'flex',
+    justifyContent:'space-around',
+    maxWidth: '100%',
+    width: 'auto',
+    width: '100vw',
+    flexWrap: 'baseline',
+    alignItems: 'center',
+    
+    }
+    }))
 
-bookNow:{
-backgroundColor:'#f4e8d1',
-height:291,
-width: '100vw',
-display: 'flex',
-justifyContent:'space-around',
-maxWidth: '100%',
-width: 'auto',
-width: '100vw',
-flexWrap: 'baseline',
-alignItems: 'center',
 
-}
-}))
-
-const Contact = () => {
-const { bookNow, mainCon} = useStyles();
+const OurSevices = () => {
+    const { bookNow, mainCon} = useStyles();
     return (
         <div className={mainCon}>
           
@@ -48,13 +49,12 @@ const { bookNow, mainCon} = useStyles();
             justifyContent:'center',
             alignItems: 'center',
             flexDirection: 'column'}}>
-                <text className='optima-regular-normal-cod-gray-28px'>BOOK NOW</text>
+                <text className='optima-regular-normal-cod-gray-28px'>OUR SERVICES</text>
                 <div style={{backgroundColor:'#000000', height:1, width:543}}></div>
-                <text className='optima-regular-normal-cod-gray-20px'style={{paddingTop:30,}}>CALL OR TEXT 424.402.9609</text>
                 </div>
             </div>
         </div>
     )
 }
 
-export default Contact
+export default OurSevices

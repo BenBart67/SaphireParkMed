@@ -12,6 +12,10 @@
   font-weight: 700;
   src: url("https://fonts.animaapp.com/Optima-Bold");
 }
+
+body{
+  font-family: 'Optima-Regular';
+}
 .screen a {
   display: contents;
   text-decoration: none;

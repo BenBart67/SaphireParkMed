@@ -13,11 +13,12 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { CardActionArea } from '@mui/material';
+import './Dashboard.css'
 
 const useStyles = makeStyles(() => ({
     servicesContainer:{
     display: 'flex',
-    paddingTop:300,
+    paddingTop:60,
     justifyContent:'center',
     flexDirection: "row",
     maxWidth: '100%',
@@ -57,7 +58,7 @@ const Services = () => {
        image="https://anima-uploads.s3.amazonaws.com/projects/613fa78586bd2aceeb55e163/releases/613fa7bb3ba8178a69f50590/img/gettyimages-1266487294@1x.png"
       />
       <CardContent>
-      <Typography>COVID-19 TESTING</Typography>
+      <text className='optima-regular-normal-cod-gray-20px'>COVID-19 TESTING</text>
       </CardContent>
       </Card>
 
@@ -71,7 +72,7 @@ const Services = () => {
        image="https://anima-uploads.s3.amazonaws.com/projects/613fa78586bd2aceeb55e163/releases/613fa7bb3ba8178a69f50590/img/gettyimages-493527752@1x.png"
       />
       <CardContent>
-      <Typography>URGENT CARE HOUSE CALLS</Typography>
+      <text className='optima-regular-normal-cod-gray-20px'>URGENT CARE HOUSE CALLS</text>
       </CardContent>
       </Card>
 
@@ -85,7 +86,7 @@ const Services = () => {
        image="https://anima-uploads.s3.amazonaws.com/projects/613fa78586bd2aceeb55e163/releases/613fa7bb3ba8178a69f50590/img/gettyimages-1279187363@1x.png"
       />
       <CardContent>
-      <Typography>TELEMEDICINE</Typography>
+      <text className='optima-regular-normal-cod-gray-20px'>TELEMEDICINE</text>
       </CardContent>
       </Card>
 
@@ -99,7 +100,7 @@ const Services = () => {
        image="https://anima-uploads.s3.amazonaws.com/projects/613fa78586bd2aceeb55e163/releases/613fa7bb3ba8178a69f50590/img/gettyimages-1270939930@1x.png"
        />
       <CardContent>
-      <Typography>PRIVATE LABS DRAWS <br/>ADULTS &amp; PEDIATRICS</Typography>
+      <text className='optima-regular-normal-cod-gray-20px'>PRIVATE LABS DRAWS <br/>ADULTS &amp; PEDIATRICS</text>
       </CardContent>
       </Card>
       </Container>

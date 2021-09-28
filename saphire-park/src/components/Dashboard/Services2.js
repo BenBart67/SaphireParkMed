@@ -15,6 +15,7 @@ import CardMedia from '@mui/material/CardMedia';
 import { CardActionArea } from '@mui/material';
 import ultrasound from './Services2imgs/ultrasounddesk.png';
 import appt from './Services2imgs/appt.png';
+import './Dashboard.css'
 
 
 const useStyles = makeStyles(() => ({
@@ -63,6 +64,7 @@ const Services2 = () => {
 
     return (
         <Container className={service2container}>
+          
     <Container className={service2container, bottomimagesDesk}>
       <Card
       style={{boxShadow:'none'}}
@@ -74,7 +76,7 @@ const Services2 = () => {
        image="https://anima-uploads.s3.amazonaws.com/projects/613fa78586bd2aceeb55e163/releases/613fa7bb3ba8178a69f50590/img/pexels-karolina-grabowska-4386464@1x.png"
       />
       <CardContent>
-      <Typography>INTERNAL MEDICINE <br/>CONSULTS</Typography>
+      <text className='optima-regular-normal-cod-gray-18px'>INTERNAL MEDICINE <br/>CONSULTS</text>
       </CardContent>
       </Card>
 
@@ -88,7 +90,7 @@ const Services2 = () => {
        image={ultrasound}
       />
       <CardContent>
-      <Typography>GASTROENTEROLOGY <br/>CONSULTS</Typography>
+      <text className='optima-regular-normal-cod-gray-18px'>GASTROENTEROLOGY <br/>CONSULTS</text>
       </CardContent>
       </Card>
 
@@ -102,7 +104,7 @@ const Services2 = () => {
        image="https://anima-uploads.s3.amazonaws.com/projects/613fa78586bd2aceeb55e163/releases/613fa7bb3ba8178a69f50590/img/pexels-nataliya-vaitkevich-7615574@1x.png"
       />
       <CardContent>
-      <Typography>PHARMACY PICK-UPS <br/>AND DROP-OFFS </Typography>
+      <text className='optima-regular-normal-cod-gray-18px'>PHARMACY PICK-UPS <br/>AND DROP-OFFS </text>
       </CardContent>
       </Card>
   
@@ -116,7 +118,7 @@ const Services2 = () => {
        image="https://anima-uploads.s3.amazonaws.com/projects/613fa78586bd2aceeb55e163/releases/613fa7bb3ba8178a69f50590/img/pexels-klaus-nielsen-6303590@1x.png"
       />
       <CardContent>
-      <Typography>CONCIERGE <br/>NURSING</Typography>
+      <text className='optima-regular-normal-cod-gray-18px'>CONCIERGE <br/>NURSING</text>
       </CardContent>
       </Card>
 
@@ -130,7 +132,7 @@ const Services2 = () => {
        image="https://anima-uploads.s3.amazonaws.com/projects/613fa78586bd2aceeb55e163/releases/613fa7bb3ba8178a69f50590/img/pexels-jill-burrow-6387845@1x.png"
       />
       <CardContent>
-      <Typography>IV VITAMIN DRIPS &amp;<br/> WELLNESS SHOTS</Typography>
+      <text className='optima-regular-normal-cod-gray-18px'>IV VITAMIN DRIPS &amp;<br/> WELLNESS SHOTS</text>
       </CardContent>
       </Card>
 
@@ -144,7 +146,7 @@ const Services2 = () => {
        image="https://anima-uploads.s3.amazonaws.com/projects/613fa78586bd2aceeb55e163/releases/613fa7bb3ba8178a69f50590/img/pexels-nataliya-vaitkevich-5863400@1x.png"
       />
       <CardContent>
-      <Typography>VACCINES</Typography>
+      <text className='optima-regular-normal-cod-gray-18px'>VACCINES</text>
       </CardContent>
       </Card>
 
@@ -158,7 +160,7 @@ const Services2 = () => {
        image="https://anima-uploads.s3.amazonaws.com/projects/613fa78586bd2aceeb55e163/releases/613fa7bb3ba8178a69f50590/img/pexels-rfstudio-3825578@1x.png"
       />
       <CardContent>
-      <Typography>DIAGNOSTIC TESTING</Typography>
+      <text className='optima-regular-normal-cod-gray-18px'>DIAGNOSTIC TESTING</text>
       </CardContent>
       </Card>
 
@@ -172,7 +174,7 @@ const Services2 = () => {
        image="https://anima-uploads.s3.amazonaws.com/projects/613fa78586bd2aceeb55e163/releases/613fa7bb3ba8178a69f50590/img/pexels-photo-5726706@1x.png"
       />
       <CardContent>
-      <Typography>STD TESTING</Typography>
+      <text className='optima-regular-normal-cod-gray-18px'>STD TESTING</text>
       </CardContent>
       </Card>
 
@@ -187,7 +189,7 @@ const Services2 = () => {
        image="https://anima-uploads.s3.amazonaws.com/projects/613fa78586bd2aceeb55e163/releases/613fa7bb3ba8178a69f50590/img/pexels-tima-miroshnichenko-5407206@1x.png"
       />
       <CardContent>
-      <Typography>WOMEN'S &amp; MEN'S<br/> SEXUAL HEALTH EXAMS</Typography>
+      <text className='optima-regular-normal-cod-gray-18px'>WOMEN'S &amp; MEN'S<br/> SEXUAL HEALTH EXAMS</text>
       </CardContent>
       </Card>
 
@@ -201,7 +203,7 @@ const Services2 = () => {
        image={appt}
       />
       <CardContent>
-      <Typography>AND MORE</Typography>
+      <text className='optima-regular-normal-cod-gray-18px'>AND MORE</text>
       </CardContent>
       </Card>
 

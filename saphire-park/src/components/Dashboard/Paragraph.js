@@ -9,6 +9,7 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Button from '@mui/material/Button';
 import { makeStyles } from "@material-ui/core";
+import './Dashboard.css'
 
 const useStyles = makeStyles(() => ({
 mainContainer: {
@@ -30,6 +31,8 @@ paragraphDesktop: {
 fontSize: 20,
 flexGrow: 4,
 marginLeft: 60,
+
+
 },
 titleDesktop:{
 fontSize: 28,
@@ -65,7 +68,7 @@ const Paragraph = () => {
         <Container className={mainContainer}>
                <img className={imageDesktop}
        src="https://anima-uploads.s3.amazonaws.com/projects/613fa78586bd2aceeb55e163/releases/613fa7bb3ba8178a69f50590/img/gettyimages-619265078@1x.png"/>
-        <Typography  className={paragraphDesktop}><Typography className={titleDesktop}>PREMIER CONCIERGE MEDICAL SERVICES<br/><br/></Typography>
+        <text className='paragraphDesktop'><text className='titleDesktop'>PREMIER CONCIERGE MEDICAL SERVICES<br/><br/></text>
         
           Founded by an accomplished physician-nurse duo, our vision was simple: a boutique concierge medical
           practice that takes a personal and comprehensive approach to expertly serve your healthcare needs.
@@ -78,7 +81,7 @@ const Paragraph = () => {
           medicine and pediatrics. <br /><br />You can expect a high-quality, personalized approach with complete, easy
           access to your healthcare team. A team that’s more than happy to work around your busy schedule to address
           your healthcare needs, whatever they may be.
-          </Typography>
+          </text>
         </Container>
     )
 }
