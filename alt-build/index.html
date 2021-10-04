@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1" />
+	 <meta name="description" content="A boutique concierge medical practice that takes a personal and comprehensive approach to expertly serve your healthcare needs."
+    />
+<title>Sapphire Park Medical</title>
+	
+	
+<link href="css/sapphire-park.css" rel="stylesheet" type="text/css">
+<script>
+	function showMobileBio(){
+		document.getElementById("btn1").style.display = "none";
+		document.getElementById("extra").className = "extra show";}
+	 window.addEventListener("DOMContentLoaded", init);
+	
+	var videoS = false;
+	var ti;
+	
+	function replaceVideo()
+	{
+		videoS = true;
+		//alert("test");
+		//ti = window.setTimeout(slideshow, 1000);
+		
+	}
+
+	function clearSInt()
+	{
+	   window.clearTimeout(ti);	
+	}
+	
+	function slideshow()
+	{
+		//alert("slideshow");
+	}
+	
+	var xhttp = new XMLHttpRequest();
+				
+	
+	function init()
+	{
+		/*
+			document.getElementById('headerVideo').addEventListener('pause', replaceVideo);
+		    document.getElementById('headerVideo').addEventListener('play', clearSInt);
+			*/
+	
+		document.getElementById("phoneBox").addEventListener("click", togglePhoneBox, false);
+		document.getElementById("emailBox").addEventListener("click", toggleEmailBox, false);
+		
+		document.getElementById("submit").addEventListener("click", submit, false);
+		
+		setTimeout(function(){
+			var t = document.getElementById("special");
+			var a = 424
+			var b = 402
+			var c = 9609
+			var d = "te";
+			t.innerHTML = a+"."+b+"."+c;
+			t.setAttribute("href", d+"l:+1"+a+b+c);
+			
+		}, 2000)
+		
+		var inp = document.getElementsByClassName("input");
+		
+		for(var i = 0; i<inp.length; i++)
+			{
+				inp[i].lastChild.addEventListener("focus", updateFocus);
+			}
+		
+	}
+	
+	function toggleEmailBox(e)
+	{
+		if(e.target.parentNode.getElementsByClassName("box")[0].className == "box")
+			{
+				e.target.parentNode.getElementsByClassName("box")[0].className = "box selected";
+				
+				
+						document.getElementById("email").parentNode.className = "input full";
+					
+			}
+		else
+			{
+				
+				e.target.parentNode.getElementsByClassName("box")[0].className = "box";
+				
+						document.getElementById("email").parentNode.className = "input full hidden";
+			
+			}
+	}
+	function togglePhoneBox(e)
+	{
+		if(e.target.parentNode.getElementsByClassName("box")[0].className == "box")
+			{
+				e.target.parentNode.getElementsByClassName("box")[0].className = "box selected";
+				
+			
+						document.getElementById("phone").parentNode.className = "input full";
+				
+			}
+		else
+			{
+				
+				e.target.parentNode.getElementsByClassName("box")[0].className = "box";
+				
+				
+						document.getElementById("phone").parentNode.className = "input full hidden";
+				
+			}
+	
+		
+	}
+	function updateFocus(e)
+	{
+		e.target.parentNode.className = e.target.parentNode.className+" selected";
+	}
+	
+	function submit()
+	{
+		var errorMessage = "";
+		if(validateName(document.getElementById("firstName").value) == false ){
+        errorMessage +="Valid first name is required.<br>";
+        document.getElementById("firstName").className = "error"; 
+	}
+
+	if(validateName(document.getElementById("lastName").value) == false){
+        errorMessage +="Valid last name is required.<br>";
+        document.getElementById("lastName").className = "error"; 
+	}
+	
+	
+	if(validateEmail(document.getElementById("email").value) == false && document.getElementById("email").value != "" ){
+        errorMessage +="Email is not valid.<br>";
+        document.getElementById("email").className = "error"; 
+	}
+
+	
+	
+	if(validatePhoneNumber(document.getElementById("phone").value) == false && document.getElementById("phone").value != "" ){
+		
+		 errorMessage +="Valid phone is required.<br>";
+        document.getElementById("phone").className = "error"; ; 
+	}
+		document.getElementById("errors").innerHTML = errorMessage;
+		if(errorMessage == false)
+			{
+				
+				document.getElementById("formStuff").className ="hidden";
+				document.getElementById("thankYou").className ="";
+				
+				
+				var outputStr = "";
+				outputStr += "firstName="+encodeURIComponent(document.getElementById("firstName").value);
+				
+				outputStr += "&lastName="+encodeURIComponent(document.getElementById("lastName").value);
+				
+				outputStr += "&address="+encodeURIComponent(document.getElementById("address").value);
+				
+				outputStr += "&city="+encodeURIComponent(document.getElementById("city").value);
+			
+				outputStr += "&email="+encodeURIComponent(document.getElementById("email").value);
+				
+				outputStr += "&phone="+encodeURIComponent(document.getElementById("phone").value);
+				
+				
+				xhttp.open("GET", "form.php?"+outputStr, true);
+				xhttp.send();
+				
+				
+			}
+	}
+	
+	
+	
+function validateZIP(elementValue)
+{
+	var zipCodePattern = /^\d{5}$|^\d{5}-\d{4}$/;
+     return zipCodePattern.test(elementValue);
+}
+
+function validateEmail(email) 
+    {
+        var re = /^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i;
+        return re.test(email);
+    }
+
+function validateName(string)
+{
+	 var re = /^[a-z ,.'-]+$/i;
+        return re.test(string);
+}
+
+function validatePhoneNumber(input_str) {
+    var re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+
+    return re.test(input_str);
+}
+	</script>	
+</head>
+
+<body>
+	<header>
+		<div class="wrapper center">
+	<img src="images/logo.png"  /><br class="mobileOnly" />
+			<a href="#call" class="contact">CONTACT</a>
+		</div>
+		
+	</header>
+	<section class="videoSection">
+	<div class="wrapper center"><video autoplay muted loop playsinline width="1080" height="760" id="headerVideo">
+		<source src="https://player.vimeo.com/external/599504614.m3u8?s=0a1614217fcbbeec5e94ebfd9492c0a1922de1e9" type="application/x-mpegURL" preload="preload">
+		<source src="https://player.vimeo.com/external/599504614.hd.mp4?s=609685832d392dc96d9158357717cbc24c3de210&profile_id=175"   type="video/mp4">
+		</video></div></section><section class="bioSection">
+		<div class="left"><img src="images/bio-section.jpg" /></div>
+		<div class="right">
+		
+		<h4>PREMIER CONCIERGE MEDICAL SERVICES</h4>
+
+<p>Founded by an accomplished physician-nurse duo, our vision was simple: a boutique concierge medical practice that takes a personal and comprehensive approach to expertly serve your healthcare needs. </p>
+
+<p>Need same-day COVID-19 testing? A house call by a top doctor? A prescription refill, or even one delivered right to your door? We got you covered. </p>
+<span class="mobileButton" onClick="showMobileBio()" id="btn1">READ MORE</span>			
+<div class="extra" id="extra">
+<p>We’re passionate about providing the highest-quality healthcare in a private, relaxed setting. And we’re committed to reducing the stress that often comes with seeking medical care. Because having a medical issue can be stressful enough.</p>
+<p>So, what about our doctors, nurses, and staff? They’re all at the top of their profession and bring a wealth of knowledge and experience with specialties ranging from emergency medicine and gastroenterology to internal medicine and pediatrics. </p>
+
+<p>You can expect a high-quality, personalized approach with complete, easy access to your healthcare team. A team that’s more than happy to work around your busy schedule to address your healthcare needs, whatever they may be. </p>
+</div>
+			<img src="images/bio-section-mobile.jpg" />
+		</div>
+	</section>
+	
+	<section class="servicesSection"><div class="wrapper"><h4>OUR SERVICES</h4>
+		<div class="first"><div><img src="images/covid-19-testing.jpg" /><p>COVID-19 TESTING</p></div><div><img src="images/urgent-care-house-calls.jpg" /><p>URGENT CARE HOUSE CALLS</p></div><div><img src="images/telemedicine.jpg" /><p>TELEMEDICINE</p></div><div><img src="images/private-lab-draws.jpg" /><p>PRIVATE LAB DRAWS<br> ADULTS &amp; PEDIATRICS</p></div></div>
+	<div class="mobileHolder">	<div class="second"><div><img src="images/internal-medicine-consults.jpg" /><p>Internal Medicine Consults</p></div><div><img src="images/gastro-consults.jpg" /><p>Gastroenterology Consults</p></div><div><img src="images/pharmacy-pick-ups.jpg" /><p>Pharmacy Pick-ups and Drop-offs </p></div><div><img src="images/concierge-nursing.jpg" /><p>Concierge Nursing </p></div><div><img src="images/iv-drips.jpg" /><p>IV Vitamin Drips &amp; Wellness Shots</p></div>
+		
+		<div><img src="images/vaccines.jpg" /><p>Vaccines</p></div><div><img src="images/diagnostic-testing.jpg" /><p>Diagnostic Testing</p></div><div><img src="images/std-testing.jpg" /><p>STD Testing</p></div><div><img src="images/womens-health.jpg" /><p>Women’s &amp; Men’s 
+Sexual Health Exams</p></div><div><img src="images/and-more.jpg" /><p>AND MORE</p></div>
+		</div>
+	  <img src="images/scroll-arrow.png" width="60" height="141" alt="" class="mobileArrow"/></div>
+		</div></section>
+	<section class="bookSection center">
+	 		<h4>BOOK NOW</h4>
+		<p id="call">CALL OR TEXT <a id="special">US TODAY</a></p>
+	</section>
+	 <section class="scheduleSection" >
+			<h4>SCHEDULE ONLINE</h4><div id="formStuff">
+		<div class="container"><div id="errors"></div><div class="input col1"><p>FIRST NAME</p><input type="text" id="firstName" name="firstName"></div><div class="input col2"><p>LAST NAME</p><input type="text" id="lastName" name="lastName"></div><div class="input col1"><p>ADDRESS</p><input type="text" id="address" name="address"></div><div class="input col3"><p>CITY</p><input type="text" id="city" name="city"></div><div class="input col4"><p>CA</p></div>
+		<p class="contactForm">PREFERRED CONTACT:<span id="phoneBox"><span class="box"></span><span>PHONE</span></span><span id="emailBox"><span class="box"></span><span>EMAIL</span></span></p>
+			<div class="input full hidden"><p>PHONE</p><input type="text" id="phone" name="phone"></div>
+			<div class="input full hidden"><p>EMAIL</p><input type="text" id="email" name="email"></div>
+		 <p><br><a class="submit" id="submit">SUBMIT</a></p>
+		 </div></div><div id="thankYou" class="hidden"><h4>Submitted</h4><p class="center">We will contact you shortly. 
+Thank you! </p></div>
+	</section>
+	<footer>
+	<div class="wrapper"><img src="images/logo.png"  /><p>©2021, Sapphire Park Medical. <br class="mobileOnly">All Rights Reserved.</p></div>
+	</footer>
+
+	
+	
+</body>
+</html>
