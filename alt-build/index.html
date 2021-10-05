@@ -3,9 +3,21 @@
 <head>
 <meta charset="UTF-8">
 	 <meta name="viewport" content="width=device-width, initial-scale=1" />
-	 <meta name="description" content="A boutique concierge medical practice that takes a personal and comprehensive approach to expertly serve your healthcare needs."
+	 <meta name="description" content="A Premier concierge Medical Practice that takes a personal and comprehensive approach to expertly serve all your Health Care Needs"
     />
-<title>Sapphire Park Medical</title>
+<title>Sapphire Park Medical | Concierge Medicine</title>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-62GQT5V8BN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-62GQT5V8BN');
+</script>
 	
 	
 <link href="css/sapphire-park.css" rel="stylesheet" type="text/css">
@@ -248,12 +260,17 @@ Sexual Health Exams</p></div><div><img src="images/and-more.jpg" /><p>AND MORE</
 	 <section class="scheduleSection" >
 			<h4>SCHEDULE ONLINE</h4><div id="formStuff">
 		<div class="container"><div id="errors"></div><div class="input col1"><p>FIRST NAME</p><input type="text" id="firstName" name="firstName"></div><div class="input col2"><p>LAST NAME</p><input type="text" id="lastName" name="lastName"></div><div class="input col1"><p>ADDRESS</p><input type="text" id="address" name="address"></div><div class="input col3"><p>CITY</p><input type="text" id="city" name="city"></div><div class="input col4"><p>CA</p></div>
-		<p class="contactForm">PREFERRED CONTACT:<span id="phoneBox"><span class="box"></span><span>PHONE</span></span><span id="emailBox"><span class="box"></span><span>EMAIL</span></span></p>
+		<p class="contactForm">PREFERRED CONTACT:<span id="phoneBox"><span class="box"></span><span>PHONE</span></span><span id="emailBox"><span class="box"></span><span id='emailtype'>EMAIL</span></span></p>
 			<div class="input full hidden"><p>PHONE</p><input type="text" id="phone" name="phone"></div>
 			<div class="input full hidden"><p>EMAIL</p><input type="text" id="email" name="email"></div>
 		 <p><br><a class="submit" id="submit">SUBMIT</a></p>
+		 <form action="?" method="POST">
+			<div class="g-recaptcha" data-sitekey="your_site_key"></div>
+			<br/>
+			<input type="submit" value="Submit">
+		  </form>
 		 </div></div><div id="thankYou" class="hidden"><h4>Submitted</h4><p class="center">We will contact you shortly. 
-Thank you! </p></div>
+		Thank you! </p></div>
 	</section>
 	<footer>
 	<div class="wrapper"><img src="images/logo.png"  /><p>©2021, Sapphire Park Medical. <br class="mobileOnly">All Rights Reserved.</p></div>
